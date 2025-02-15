@@ -80,7 +80,6 @@ resource "aws_security_group" "dicoding_sg" {
 resource "aws_instance" "dicoding_terraform" {
   ami                    = "ami-0198a868663199764" # AMI Ubuntu 22.04 (update sesuai region)
   instance_type          = "t2.medium"
-//   key_name               = "AKIAQ4J5YJFSRTAOHVLO" # Ganti dengan nama key pair Anda
   vpc_security_group_ids = [aws_security_group.dicoding_sg.id]
 
   root_block_device {
